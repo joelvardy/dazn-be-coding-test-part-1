@@ -1,0 +1,3 @@
+export interface FixtureWithTranslation {
+  // to be defined...
+}
