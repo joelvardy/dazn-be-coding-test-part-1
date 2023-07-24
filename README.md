@@ -8,25 +8,7 @@ We have a service that receives events. Each event consists of a fixture record,
 
 For example:
 
-```
-{
-  fixtureId: "xyzen",
-  name: "Benfica v Bayern Munich",
-  languageCode: "en",
-  competitions: [
-    {
-      competitionId: "abcen",
-      languageCode: "en",
-      competitionName: "English League"
-    },
-    {
-      competitionId: "abcde",
-      languageCode: "de",
-      competitionName: "Englische Liga"
-    },
-    ...
-  ]
-},
+```json
 {
   fixtureId: "xyzde",
   name: "Benfica v Bayern München",
@@ -41,16 +23,12 @@ For example:
       competitionId: "abcde",
       languageCode: "de",
       competitionName: "Englische Liga"
-    },
-    ...
+    }
   ]
-},
-...
+}
 ```
 
-As you can see, each fixture record also contains a list of competition objects, one for each language that the competition is available.
-
-Each competition object contains a competition ID, a language code and the translated competition name.
+As you can see, each fixture record also contains a list of competition objects, one for each language that the competition is available. Each competition object contains a competition ID, a language code and the translated competition name.
 
 There may be a competition name matching the language of the fixture, but there is always an English translation.
 
