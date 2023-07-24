@@ -1,8 +1,6 @@
-# Code challenges
+# DAZN BE Coding Test (part 1)
 
-## Task 1
-
-### Background
+## Background
 
 We have a service that receives events. Each event consists of a fixture record, which is a JSON object representing a sporting event (e.g., a football match) for a specific language (therefore one sporting event will have many fixture records).
 
@@ -10,19 +8,19 @@ For example:
 
 ```json
 {
-  fixtureId: "xyzde",
-  name: "Benfica v Bayern München",
-  languageCode: "de",
-  competitions: [
+  "fixtureId": "xyzde",
+  "name": "Benfica v Bayern München",
+  "languageCode": "de",
+  "competitions": [
     {
-      competitionId: "abcen",
-      languageCode: "en",
-      competitionName: "English League"
+      "competitionId": "abcen",
+      "languageCode": "en",
+      "competitionName": "English League"
     },
     {
-      competitionId: "abcde",
-      languageCode: "de",
-      competitionName: "Englische Liga"
+      "competitionId": "abcde",
+      "languageCode": "de",
+      "competitionName": "Englische Liga"
     }
   ]
 }
@@ -32,7 +30,7 @@ As you can see, each fixture record also contains a list of competition objects,
 
 There may be a competition name matching the language of the fixture, but there is always an English translation.
 
-### The Task
+## The Task
 
 You should implement a function that accepts a fixture record, and returns a FixtureWithTranslation object.
 
@@ -44,8 +42,24 @@ You should also implement any interfaces that are necessary, referring to the un
 
 All Unit tests in `task-1.test.ts` should pass.
 
-### Commands
+### Expected output
 
- * Install dependancies: `npm ci`
+We would expect the FixtureWithTranslation object for the above example to look like this:
+
+__This is covered in tests too.__
+
+```json
+{
+  "fixtureId": "xyz",
+  "languageCode": "de",
+  "name": "Benfica v Bayern München",
+  "competitionId": "abc",
+  "competitionName": "Englische Liga"
+}
+```
+
+## Commands
+
+ * Install dependencies: `npm ci`
  * Run tests once: `npm test`
  * Keep running tests as code changes: `npm run test-watch`
