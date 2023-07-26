@@ -57,9 +57,3 @@ __This is covered in tests too.__
   "competitionName": "Englische Liga"
 }
 ```
-
-## Commands
-
- * Install dependencies: `npm ci`
- * Run tests once: `npm test`
- * Keep running tests as code changes: `npm run test-watch`
